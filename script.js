@@ -1,22 +1,97 @@
-const numberOfFilms = +prompt("сколько фильмов вы уже посмотрели?", '');
+"use strict";
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies : {},
-    actor: {},
-    genres: [],
-    privat : false
-};
+// const numberOfFilms = +prompt("сколько фильмов вы уже посмотрели?", '');
 
-const a = prompt("Один из последних просмотренных фильмов?", ''),
-      b=  prompt("На сколько оцените его?", ''),
-      c= prompt("Один из последних просмотренных фильмов?", ''),
-      d = prompt("На сколько оцените его?", '');
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies : {},
+//     actor: {},
+//     genres: [],
+//     privat : false
+// };
 
-      personalMovieDB.movies[a] = b;
-      personalMovieDB.movies[c] = d;
+// const a = prompt("Один из последних просмотренных фильмов?", ''),
+//       b=  prompt("На сколько оцените его?", ''),
+//       c= prompt("Один из последних просмотренных фильмов?", ''),
+//       d = prompt("На сколько оцените его?", '');
+
+//       personalMovieDB.movies[a] = b;   
+//       personalMovieDB.movies[c] = d;
 
 
-console.log(personalMovieDB);
+// console.log(personalMovieDB);
+
+
+// if (4 == 9){
+//     console.log("ok");
+// } else {
+//     console.log("Error");
+// }
+
+
+
+// if (num < 49){
+//     console.log("Error");
+// }else if (num >100){
+//     console.log("Слишком много")
+// }else{
+//     console.log("OK");
+// }
+
+// (num === 50) ? console.log ("ok!") : console.log("Error");
+
+// const num = 50;
+
+// switch (num){
+//     case 49: 
+//         console.log("Неверно");
+//         break;
+//     case 100:
+//         console.log("Неверно");
+//         break;
+//     case 51:
+//         console.log("В точку");
+//         break;
+//     default:
+//         console.log("Не в этот раз");
+//         break
+// }
+
+let num = 50;
+
+// while (num <= 55){
+//     console.log(num);
+//     num++;
+// }
+
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while(num <= 55);
+
+for (let i = 1; i < 10; i++){
+if(i===6){
+    // break
+    continue
+}
+
+    console.log(i);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
