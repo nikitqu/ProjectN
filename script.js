@@ -112,6 +112,7 @@ for (let i =0; i <2; i++){
             i--;
         }
 
+<<<<<<< HEAD
         if(personalMovieDB.count< 10){
             console.log("Просмотренно довольно мало фильмов");
         }else if(personalMovieDB.count >=10 && personalMovieDB.count <30){
@@ -122,6 +123,8 @@ for (let i =0; i <2; i++){
             console.log("Произошла ошибка");
         }
 
+=======
+>>>>>>> 7d6a8740f19ac8549c810cdca70c01687d349edc
 }
 console.log(personalMovieDB);
 
