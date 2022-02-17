@@ -43,7 +43,9 @@
 //     console.log("OK");
 // }
 
-// (num === 50) ? console.log ("ok!") : console.log("Error");      // Тернарное выражение
+//------------------------------------ Тернарное выражение--------------------------------
+
+// (num === 50) ? console.log ("ok!") : console.log("Error");      
  
 // const num = 50;
 
@@ -87,7 +89,7 @@
 
 // ------------------------------------------------------------- Практика ч2.-------------------------------
 
-const numberOfFilms = +prompt("сколько фильмов вы уже посмотрели?", '');
+const numberOfFilms = prompt("сколько фильмов вы уже посмотрели?", '');
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -109,6 +111,17 @@ for (let i =0; i <2; i++){
             console.log("Error!!!");
             i--;
         }
+
+        if(personalMovieDB.count< 10){
+            console.log("Просмотренно довольно мало фильмов");
+        }else if(personalMovieDB.count >=10 && personalMovieDB.count <30){
+            console.log("Вы классический зритель");
+        }else if(personalMovieDB.count >= 30){
+            console.log("Вы киноман");
+        }else {
+            console.log("Произошла ошибка");
+        }
+
 }
 console.log(personalMovieDB);
 
