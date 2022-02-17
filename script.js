@@ -170,13 +170,34 @@
 
 // ------------------------------------------------ Функции, Стрелочные ф-ции(ES6)-----------------------------------
 
+// let num = 20;
+
+// function showFirstMessage(text){
+//     console.log(text);
+//     let num = 10;
+//     console.log(num);
+// }
+// showFirstMessage("Hello Worlds!");
+// console.log(num);
 
 
+// function calc(a,b){
+//     return (a+b);
+// }
+// console.log(calc(5,6));
+// console.log(calc(10,6));
 
+// function ret(){
+//     let num =50;
+//     return num;
+// }
+// const anythingNum = ret();
+// console.log(anythingNum);
 
+// Function expression
 
+// const logger = function(){
+//     console.log("Hello");
+// };
 
-
-
-
-
+// logger();
