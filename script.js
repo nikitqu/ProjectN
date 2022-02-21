@@ -212,6 +212,11 @@
 // console.log(str.length);
 // console.log(arr.length);
 
+// ------------------Методы:---------------
+
+// const str = "TEST";
+// console.log(str.toLowerCase());
+
 // const fruit = "Some fruit";
 // console.log(fruit.indexOf("u"));  
 
@@ -226,123 +231,148 @@
 // console.log(parseInt(test));
 // console.log(parseFloat(test));
 
+// Свойства не вызываются, пишутся через точку .length
+// Методы вызываются и пишутся с ()
 
 // ----------------------------------------------ч3.Используем функции-------------------------------
 
-let numberOfFilms;
+// let numberOfFilms;
 
-function start(){
-     numberOfFilms = +prompt("сколько фильмов вы уже посмотрели?", '');
+// function start(){
+//      numberOfFilms = +prompt("сколько фильмов вы уже посмотрели?", '');
 
-    while(numberOfFilms == "" || numberOfFilms == null || isNaN(numberOfFilms)){
-        numberOfFilms = +prompt("сколько фильмов вы уже посмотрели?", '');
-    }
-}
+//     while(numberOfFilms == "" || numberOfFilms == null || isNaN(numberOfFilms)){
+//         numberOfFilms = +prompt("сколько фильмов вы уже посмотрели?", '');
+//     }
+// }
 
-start();
+// start();
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies : {},
-    actor: {},
-    genres: [],
-    privat : false
-};
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies : {},
+//     actor: {},
+//     genres: [],
+//     privat : false
+// };
 
-function rememberMyFilms(){
-    for (let i =0; i <2; i++){
-        const a = prompt("Один из последних просмотренных фильмов?", ''),
-              b=  prompt("На сколько оцените его?", '');
+// function rememberMyFilms(){
+//     for (let i =0; i <2; i++){
+//         const a = prompt("Один из последних просмотренных фильмов?", ''),
+//               b=  prompt("На сколько оцените его?", '');
               
-            if(a != null && b != null && a != '' && b != '' && a.length < 50 ){
-                personalMovieDB.movies[a] = b; 
-                console.log("Done !");
-            }else {
-                console.log("Error!!!");
-                i--;
-            }
+//             if(a != null && b != null && a != '' && b != '' && a.length < 50 ){
+//                 personalMovieDB.movies[a] = b; 
+//                 console.log("Done !");
+//             }else {
+//                 console.log("Error!!!");
+//                 i--;
+//             }
+//     }
+// }
+
+// // rememberMyFilms();
+
+// function detectPersonalLevel(){
+//     if(personalMovieDB.count< 10){
+//         console.log("Просмотренно довольно мало фильмов");
+//     }else if(personalMovieDB.count >=10 && personalMovieDB.count <30){
+//         console.log("Вы классический зритель");
+//     }else if(personalMovieDB.count >= 30){
+//         console.log("Вы киноман");
+//     }else {
+//         console.log("Произошла ошибка");
+//     }
+// }
+
+// // detectPersonalLevel();
+
+// function showMyDB(hidden){
+//     if(!hidden){
+//         console.log(personalMovieDB);
+//     }
+// }
+
+// showMyDB(personalMovieDB.privat);
+
+// function writeYourGenres(){
+//     for(let i = 1; i <=3; i++){
+//         personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i} ? `);
+//     }
+// }
+// writeYourGenres();
+
+
+// ------------------------------------------Callback-Функции-----------------------------------------------
+
+
+// function first(){
+//     setTimeout(function(){
+//         console.log(1);
+//     },1000);
+// }
+//  function second(){
+//      console.log(2);
+//  }
+// first();
+// second();
+
+
+// function learnJS(lang, Callback){
+//     console.log(`Я учу: ${lang}`);
+//     Callback();
+// }
+// learnJS("JavaScript");
+
+
+// function calc(one, callback){
+//     console.log(`Сначала cделай это ${one}`);
+//     callback();
+// }
+
+// function two(){
+//     console.log("А затем вот это");
+// }
+
+// calc("действие", two);
+
+
+// -----------------------------------------Объекты, деструктуризация объектов(ES6)-------------------------------------
+
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    },
+    makeTest: function(){
+        console.log("Test");
     }
-}
+};
+options.makeTest();
 
-// rememberMyFilms();
+// console.log(Object.keys(options).length);
 
-function detectPersonalLevel(){
-    if(personalMovieDB.count< 10){
-        console.log("Просмотренно довольно мало фильмов");
-    }else if(personalMovieDB.count >=10 && personalMovieDB.count <30){
-        console.log("Вы классический зритель");
-    }else if(personalMovieDB.count >= 30){
-        console.log("Вы киноман");
-    }else {
-        console.log("Произошла ошибка");
-    }
-}
+// console.log(options.name);
 
-// detectPersonalLevel();
+// delete options.name;
 
-function showMyDB(hidden){
-    if(!hidden){
-        console.log(personalMovieDB);
-    }
-}
+// console.log(options);
 
-showMyDB(personalMovieDB.privat);
-
-function writeYourGenres(){
-    for(let i = 1; i <=3; i++){
-        personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i} ? `);
-    }
-}
-writeYourGenres();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// for (let key in options){
+//     console.log(`Свойства ${key} имеет значение ${options[key]}`);
+// }
+// for(let key in options){
+//     if(typeof(options[key]) === 'object'){
+//         for (let i in options[key]){
+//             console.log(`Свойства ${i} имеет значение ${options[key][i]}`); 
+//         }
+//     }else{
+//         console.log(`Свойства ${key} имеет значение ${options[key]}`);
+//     }
+// }
 
 
 
