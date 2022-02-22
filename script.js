@@ -339,19 +339,19 @@
 
 // -----------------------------------------Объекты, деструктуризация объектов(ES6)-------------------------------------
 
-const options = {
-    name: 'test',
-    width: 1024,
-    height: 1024,
-    colors: {
-        border: 'black',
-        bg: 'red'
-    },
-    makeTest: function(){
-        console.log("Test");
-    }
-};
-options.makeTest();
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     height: 1024,
+//     colors: {
+//         border: 'black',
+//         bg: 'red'
+//     },
+//     makeTest: function(){
+//         console.log("Test");
+//     }
+// };
+// options.makeTest();
 
 // console.log(Object.keys(options).length);
 
@@ -360,6 +360,10 @@ options.makeTest();
 // delete options.name;
 
 // console.log(options);
+
+
+// ------------------ Перебор---------------------
+
 
 // for (let key in options){
 //     console.log(`Свойства ${key} имеет значение ${options[key]}`);
@@ -373,6 +377,245 @@ options.makeTest();
 //         console.log(`Свойства ${key} имеет значение ${options[key]}`);
 //     }
 // }
+
+
+// ---------------------------------------------Массивы и Псевдомассивы----------------------------------------
+
+
+// const arr = [1,22,13,6,18];
+
+
+// arr.forEach(function(item, i, arr){
+//     ++i;
+//     console.log(`под номером ${i++}: находится ${item} внутри массива с данными: ${arr}`);
+// });
+
+
+// arr.sort(compareNum);
+
+// console.log(arr);
+
+// function compareNum (a,b){
+//     return a-b;
+// }
+
+// arr[99]=0;
+// console.log(arr.length);
+// console.log(arr);
+
+// 1.Цикл
+
+// for (let i=0; i<arr.length;i++){
+//     console.log(arr[i]);
+// }
+
+// 2. Перебор
+// for (let value of arr){
+//     console.log(value);
+// }
+
+//3.forEach 
+// arr.forEach(function(item, i, arr){
+//     console.log(`${i}: ${item} внутри массива ${arr}`);
+// });
+
+
+// arr.pop();
+// arr.push(10);
+
+// console.log(arr);
+
+
+
+// const str = prompt('', '');
+// const prod = str.split(', ');
+// prod.sort();
+// console.log(prod.join(' | '));
+
+
+// -------------------------------------------Передача по ссылке или по значению,Spread оператор-----------------------------
+
+
+// let a = 5, 
+//     b = a;
+// b = b + 5;
+
+// console.log(b);
+// console.log(a);
+
+
+
+// const obj = {
+//     a:5,
+//     b:1
+// };
+
+// const copy = obj; // Скопировали Ссылку  на этот объект
+// copy.a = 10;
+
+// console.log(copy);
+// console.log(obj);
+
+// ----------------поверхностное Копирование объекта-----------------
+
+// function copy(mainObj){
+//     let objCopy ={};
+
+//     let key;
+//     for (key in mainObj){
+//         objCopy[key]= mainObj[key];
+//     }return objCopy;
+// }
+
+// const numbers = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         x: 7,
+//         y:4
+//     }
+// };
+
+// const newNumbers = copy(numbers);
+// newNumbers.a =10;
+ 
+// console.log(numbers);
+// console.log(newNumbers);
+
+// -----------------------------------object assign соединение объектов----------
+
+
+// const add ={
+//     d: 17,
+//     e:20
+// };
+
+// const clone = Object.assign({}, add);
+
+// clone.d = 20;
+
+// console.log(add);
+// console.log(clone);
+
+
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();
+
+// newArray[1]= 'asdfdfsdf';
+// console.log(newArray);
+// console.log(oldArray);
+
+// const video= ['youtube', 'vimeo', 'rutube'],
+//       blogs = ['wordpress', 'livejournal', 'blogger'],
+//       internet = [...video, ...blogs, 'vk', 'facebook'];
+
+//       console.log(internet);
+
+// ----------------------spread операторы-------------
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+
+// const num = [2, 5, 7];
+
+// log(...num);
+
+// const array = ['a', 'b'];
+
+// const newArray = [...array];
+
+// const q = {
+//     one: 1,
+//     two: 2
+// };
+
+// const newObj = {...q};
+
+
+// console.log(q);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
